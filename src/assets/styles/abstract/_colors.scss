@@ -3,22 +3,21 @@
 // Main Colors
 
 // Primary Colors
-$clr-primary-color-election-night: #110320;
-$clr-primary-color-fading-horizon: #442266;
-$clr-primary-color-iris-royale: #591b98;
+$clr-primary-color-blue: hsl(246, 80%, 60%);
 
-// Secondary Colors
-$clr-secondary-color-neon-spring: #3ffd6a;
-
-// Tertiary Colors
-$clr-tertiary-color-star-dust: #f9f3dd;
-$clr-tertiary-color-crackled: #f2e7d1;
-
-// Shadows
-
-// Gradients
+// Card Colors
+$clr-card-color-orange: hsl(15, 100%, 70%); // Work
+$clr-card-color-soft-blue: hsl(195, 74%, 62%); // Play
+$clr-card-color-light-red: hsl(348, 100%, 68%); // Study 
+$clr-card-color-lime-green: hsl(145, 58%, 55%); // Exercise
+$clr-card-color-violet: hsl(264, 64%, 52%); // Social
+$clr-card-color-yellow: hsl(43, 84%, 65%); // Self Care
 
 // Neutrals
+$clr-very-dark-blue: hsl(226, 43%, 10%);
+$clr-dark-blue: hsl(235, 46%, 20%);
+$clr-desaturated-blue: hsl(235, 45%, 61%);
+$clr-pale-blue: hsl(236, 100%, 87%);
 $clr-white: #ffffff;
 $clr-black: #000000;
 

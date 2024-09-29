@@ -1,0 +1,55 @@
+.time-card {
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 100%;
+  z-index: 1;
+  margin-top: -1rem;
+  
+  &__icon-section {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 1rem;
+    background-color: $clr-card-color-lime-green;
+    z-index: -1;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+  }
+  
+  &__icon {
+    position: relative;
+    margin-right: 1.5rem;
+  }
+  
+  &__content {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: $clr-dark-blue;
+    
+    &:hover {
+      background-color: $clr-desaturated-blue;
+    }
+  }
+  
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__title {
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+  
+  &__current-time {
+    font-size: 3.5rem;
+  }
+
+  &__previous-time {
+    font-size: 0.9375rem;
+    color: $clr-pale-blue;
+  }
+}
