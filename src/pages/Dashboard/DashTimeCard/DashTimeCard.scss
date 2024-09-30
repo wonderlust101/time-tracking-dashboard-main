@@ -3,49 +3,99 @@
   cursor: pointer;
   width: 100%;
   z-index: 1;
-  margin-top: -1rem;
-  
+  position: relative;
+  bottom: 1rem;
+  margin-bottom: -1rem;
+
   &__icon-section {
     display: flex;
     justify-content: flex-end;
     position: relative;
     top: 1rem;
-    background-color: $clr-card-color-lime-green;
+    height: 4rem;
     z-index: -1;
     border-radius: 1rem 1rem 0 0;
     overflow: hidden;
+
+    &--work {
+      background-color: $clr-card-color-orange;
+    }
+
+    &--play {
+      background-color: $clr-card-color-soft-blue;
+    }
+
+    &--study {
+      background-color: $clr-card-color-light-red;
+    }
+
+    &--exercise {
+      background-color: $clr-card-color-lime-green;
+
+      & > * {
+        top: 0 !important;
+      }
+    }
+
+    &--social {
+      background-color: $clr-card-color-violet;
+    }
+
+    &--self-care {
+      background-color: $clr-card-color-yellow;
+    }
   }
-  
+
   &__icon {
-    position: relative;
+    position: absolute;
+    width: 5rem;
+    top: -0.75rem;
     margin-right: 1.5rem;
+    max-width: unset;
   }
-  
+
   &__content {
     display: grid;
     gap: 1.5rem;
     padding: 2rem;
     border-radius: 1rem;
     background-color: $clr-dark-blue;
-    
+
     &:hover {
       background-color: $clr-desaturated-blue;
     }
   }
-  
+
   &__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   &__title {
     font-size: 1.125rem;
     font-weight: 400;
   }
-  
+
+  &__times {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpoint(medium) {
+      display: grid;
+      gap: 0.5rem;
+      justify-content: unset;
+    }
+  }
+
   &__current-time {
-    font-size: 3.5rem;
+    font-size: 2rem;
+    font-weight: 300;
+
+    @include breakpoint(medium) {
+      font-size: 3.5rem;
+    }
   }
 
   &__previous-time {

@@ -6,72 +6,18 @@
   justify-content: center;
 
   &__grid {
+    grid-area: 1/2;
     display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
     gap: 2rem;
-  }
-}
+    padding: 5rem 0;
 
-p, h2, h1, label {
-  color: white;
-}
-
-.dashboard-user-card {
-  grid-area: 1/1 / -1/1;
-  display: grid;
-  grid-template-rows: 1fr max-content;
-  background-color: $clr-dark-blue;
-  border-radius: 1rem;
-  overflow: hidden;
-  max-width: 16rem;
-  
-  &__image {
-    width: 5rem;
-    border: 4px solid $clr-white;
-    border-radius: 50rem;
-  }
-  
-  &__user {
-    display: grid;
-    align-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    background-color: $clr-primary-color-blue;
-    border-radius: 1rem;
-  }
-  
-  &__text {
-    display: grid;
-    gap: 0.5rem;
-  }
-  
-  &__timeframes {
-    padding: 2rem;
-  }
-  
-  &__timeframes-list {
-    display: grid;
-    gap: 1.5rem;
-  }
-  
-  &__timeframe-radio {
-    display: none;
-  }
-  
-  &__timeframe-label {
-    color: $clr-desaturated-blue;
-    cursor: pointer;
-
-    &:checked {
-      color: $clr-white;
+    @include breakpoint(medium) {
+      grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     }
-
-    &:hover {
-      color: $clr-white;
+    
+    @include breakpoint(large) {
+      grid-template: repeat(2, 1fr) / repeat(4, 1fr);
     }
   }
-
-  &__timeframe-radio:checked + &__timeframe-label {
-    color: $clr-white;
-  }
 }
+

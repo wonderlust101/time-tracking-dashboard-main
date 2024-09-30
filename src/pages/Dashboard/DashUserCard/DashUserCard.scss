@@ -1,0 +1,75 @@
+.dashboard-user-card {
+  grid-area: 1/1 / -1/1;
+  display: grid;
+  grid-template-rows: 1fr max-content;
+  background-color: $clr-dark-blue;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  &__image {
+    width: 5rem;
+    border: 4px solid $clr-white;
+    border-radius: 50rem;
+  }
+
+  &__user {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: $clr-primary-color-blue;
+    border-radius: 1rem;
+    
+    @include breakpoint(medium) {
+      grid-template: max-content 1fr / 1fr;
+    }
+  }
+  
+  &__sub-header {
+    color: $clr-pale-blue;
+  }
+
+  &__text {
+    display: grid;
+    gap: 0.5rem;
+    align-content: center;
+  }
+
+  &__timeframes {
+    padding: 2rem;
+  }
+
+  &__timeframes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    gap: 1.5rem;
+    
+    @include breakpoint(medium) {
+      grid-template: repeat(3, 1fr) / 1fr;
+      text-align: left;
+    }
+  }
+
+  &__timeframe-radio {
+    display: none;
+  }
+
+  &__timeframe-label {
+    color: $clr-desaturated-blue;
+    cursor: pointer;
+
+    &:checked {
+      color: $clr-white;
+    }
+
+    &:hover {
+      color: $clr-white;
+    }
+  }
+
+  &__timeframe-radio:checked + &__timeframe-label {
+    color: $clr-white;
+  }
+}
